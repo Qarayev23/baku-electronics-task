@@ -1,0 +1,13 @@
+.wrapper {
+    display: flex;
+}
+
+.main {
+    width: calc(100% - rem(288));
+    margin-left: auto;
+
+    &.full {
+        width: 100%;
+        margin-left: initial;
+    }
+}

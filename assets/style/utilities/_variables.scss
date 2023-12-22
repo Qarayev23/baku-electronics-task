@@ -1,0 +1,15 @@
+$bg-gray: #F5F5F5;
+$black: #333333;
+
+$break-points: (
+  "sm": 576,
+  "md": 768,
+  "lg": 991,
+  "xl": 1200,
+  "xxl": 1440,
+);
+
+$desktop-width: map-get($break-points, "xl");
+$desktop-sm-width: map-get($break-points, "lg");
+$tablet-width: map-get($break-points, "md");
+$mobile-width: map-get($break-points, "sm");
