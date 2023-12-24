@@ -1,14 +1,14 @@
 import type { Metadata } from 'next'
 import { Poppins } from 'next/font/google'
 import '@/assets/style/main.scss'
-import Navbar from '@/components/layout/navbar'
 import SideBar from '@/components/layout/sideBar'
 import ContextProvider from '@/context/ContextProvider'
 import Main from '@/components/main'
+import Header from '@/components/layout/header'
 
 const poppins = Poppins({
   subsets: ['latin'],
-  weight: ['400', "500", "600", '700'],
+  weight: ["400", "500", "600", "700", "800", "900"],
   display: 'swap',
 })
 
@@ -29,7 +29,7 @@ export default function RootLayout({
           <div className="wrapper">
             <SideBar />
             <Main>
-              <Navbar />
+              <Header />
               <main>
                 {children}
               </main>

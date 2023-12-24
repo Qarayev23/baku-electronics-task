@@ -1,0 +1,51 @@
+@import '@/assets/style/utilities/index.scss';
+
+.list {
+    display: flex;
+    align-items: center;
+    gap: rem(32);
+    margin-top: rem(43);
+    height: fit-content;
+
+    &__link {
+        display: flex;
+        align-items: center;
+        gap: rem(8);
+        position: relative;
+
+        span {
+            @include font(14, 400, 21);
+            opacity: 0.6;
+            transition: 0.3s;
+        }
+
+        &:hover {
+            span {
+                opacity: 1;
+            }
+        }
+
+        &.active {
+            span {
+                @include font(14, 700, 21);
+                opacity: 1;
+            }
+
+            &::after {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: rem(-43);
+                width: 100%;
+                height: rem(3);
+                border-radius: rem(3);
+                pointer-events: none;
+                background-color: $main-color;
+            }
+        }
+    }
+
+    @include breakpoint-max($desktop-width) {
+        display: none;
+    }
+}

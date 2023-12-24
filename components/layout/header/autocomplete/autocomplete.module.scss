@@ -1,0 +1,277 @@
+@import '@/assets/style/utilities/index.scss';
+
+.autocomplete {
+    position: absolute;
+    left: 0;
+    top: rem(93);
+    width: 100%;
+    background-color: $bg-gray;
+    border-radius: rem(20);
+    padding: rem(25);
+    display: none;
+    animation: fadeIn 0.5s;
+    z-index: 6;
+
+    &.show {
+        display: block;
+    }
+
+    &__body {
+        margin-top: rem(15);
+        display: flex;
+        gap: rem(14);
+    }
+
+    &__left {
+        display: flex;
+        flex-direction: column;
+        gap: rem(35);
+        background-color: white;
+        border-radius: rem(15);
+        padding: rem(18) rem(25) rem(25) rem(25);
+        width: 45%;
+    }
+
+    &__right {
+        width: 55%;
+    }
+
+    &__title {
+        @include font(14, 700, 21);
+    }
+
+    .chips {
+        display: flex;
+        flex-wrap: wrap;
+        gap: rem(9);
+
+        &__item {
+            background-color: #D9D9D9;
+            padding: rem(2) rem(18);
+            border-radius: rem(109);
+            @include font(14, 400, 21);
+            text-align: center;
+            transition: none;
+
+            &:hover {
+                background-color: darken(#D9D9D9, 7%);
+            }
+        }
+    }
+
+    .suggestions {
+        display: flex;
+        flex-direction: column;
+        gap: rem(6);
+        margin-top: rem(8);
+
+        &__link {
+            display: flex;
+            align-items: center;
+            gap: rem(9);
+            @include font(14, 400, 21);
+            padding: rem(12) 0;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            transition: none;
+
+            &:hover {
+                background-color: darken(white, 7%);
+                border-radius: rem(12);
+            }
+        }
+    }
+
+    .products {
+        background-color: white;
+        border-radius: rem(15);
+        padding: rem(18) rem(25) rem(27) rem(25);
+
+        &__list {
+            display: flex;
+            flex-direction: column;
+            gap: rem(20);
+            margin-top: rem(30);
+        }
+
+        &__link {
+            background-color: #F7F7F7;
+            border-radius: rem(10);
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            padding: rem(9) rem(5) rem(10) rem(9);
+
+            &:hover {
+                box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+            }
+        }
+
+        &__info {
+            position: relative;
+            padding-left: rem(87);
+        }
+
+        &__image {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            display: flex;
+
+            img {
+                object-fit: cover;
+            }
+        }
+
+        &__description {
+            display: flex;
+            flex-direction: column;
+        }
+
+        &__name {
+            @include font(14, 400, 21);
+        }
+
+        &__category {
+            @include font(14, 700, 21);
+        }
+
+        &__price {
+            display: flex;
+            flex-direction: column;
+        }
+
+        &__oldPrice {
+            @include font(10, 400, 15);
+            color: #858585;
+
+            b {
+                text-decoration: line-through;
+            }
+        }
+
+        &__newPrice {
+            @include font(14, 700, 21);
+        }
+    }
+
+    .banner {
+        background-color: white;
+        border-radius: rem(15);
+        padding: rem(12) rem(25) 0 rem(25);
+        display: flex;
+        justify-content: center;
+        margin-top: rem(14);
+
+        &__img {
+            width: rem(388);
+            height: rem(152);
+            position: relative;
+
+            img {
+                object-fit: cover;
+            }
+        }
+    }
+
+    @include breakpoint-max($desktop-width) {
+        &__body {
+            flex-direction: column;
+        }
+
+        &__left {
+            width: 100%;
+        }
+
+        &__right {
+            width: 100%;
+        }
+    }
+
+    @include breakpoint-max($tablet-width) {
+        &__body {
+            margin-top: 0;
+        }
+
+        &__left {
+            display: none;
+        }
+
+        .chips {
+            display: none;
+        }
+    }
+
+    @include breakpoint-max($mobile-width) {
+        box-shadow: 0px 13.457876205444336px 28.139196395874023px 0px #00000030;
+        background: white;
+        padding: rem(11) rem(16) rem(18);
+        top: rem(146);
+
+        .products {
+            padding: 0;
+
+            &__list {
+                margin-top: rem(23);
+            }
+
+            &__link {
+                padding-bottom: rem(8);
+            }
+
+            &__image {
+                img {
+                    width: rem(46);
+                    height: rem(53);
+                }
+            }
+
+            &__description {
+                gap: rem(2);
+            }
+
+            &__info {
+                padding-left: rem(65);
+            }
+
+            &__name {
+                @include font(10, 400, 15);
+            }
+
+            &__category {
+                @include font(10, 700, 15);
+            }
+
+            &__oldPrice {
+                @include font(8, 400, 12);
+            }
+
+            &__newPrice {
+                @include font(10, 700, 15);
+            }
+        }
+
+        &__title {
+            @include font(12, 700, 18);
+        }
+
+        .banner {
+            box-shadow: 2px 5px 10px 1px #0000001A;
+            padding-top: rem(7);
+
+            &__img {
+                width: rem(212);
+                height: rem(82);
+            }
+        }
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}

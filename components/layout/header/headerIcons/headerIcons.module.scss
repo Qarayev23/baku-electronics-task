@@ -1,0 +1,84 @@
+@import '@/assets/style/utilities/index.scss';
+
+.icons {
+    display: flex;
+    align-items: center;
+    gap: rem(12);
+    height: fit-content;
+    margin-top: rem(35);
+
+    .icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: rem(38);
+        height: rem(38);
+        border-radius: rem(12);
+        box-shadow: 0px 10px 19px 0px #00000008;
+        background-color: $bg-gray;
+        position: relative;
+
+        &:hover {
+            background-color: darken($bg-gray, 9%);
+        }
+
+        .lang {
+            @include font(14, 700, 21);
+        }
+
+        .count {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            right: rem(-5);
+            top: rem(-5);
+            width: rem(18);
+            height: rem(12);
+            border-radius: rem(14);
+            background-color: $main-color;
+            @include font(8, 700, 12);
+            color: white;
+        }
+
+        &.mob {
+            @include breakpoint-min($desktop-width) {
+                display: none;
+            }
+        }
+
+        &.desk {
+            @include breakpoint-max($desktop-width) {
+                display: none;
+            }
+        }
+    }
+
+    @include breakpoint-max($desktop-width) {
+        .icon{
+            &:nth-child(1) {
+                order: 2;
+            }
+    
+            &:nth-child(2) {
+                order: 1;
+            }
+    
+            &:nth-child(5) {
+                order: 3;
+            }
+    
+            &:nth-child(6) {
+                order: 4;
+            }
+        }
+    }
+
+    @include breakpoint-max($mobile-width) {
+        gap: rem(8);
+    }
+
+    @include breakpoint-max($tablet-width) {
+        margin-top: rem(21);
+    }
+}

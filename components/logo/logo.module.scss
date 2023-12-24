@@ -1,0 +1,14 @@
+@import '@/assets/style/utilities/index.scss';
+
+.logo {
+    &.mob {
+        @include breakpoint-min($tablet-width) {
+            display: none;
+        }
+    }
+
+    @include breakpoint-max($tablet-width) {
+        width: rem(49);
+        height: rem(48);
+    }
+}

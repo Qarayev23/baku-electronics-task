@@ -1,0 +1,36 @@
+@import '@/assets/style/utilities/index.scss';
+
+.header {
+    &__wrapper {
+        position: relative;
+        padding-bottom: rem(20);
+        display: flex;
+        justify-content: space-between;
+        gap: rem(56);
+    }
+
+    &__left {
+        display: flex;
+        align-items: center;
+        gap: rem(17);
+        margin-top: rem(35);
+        flex-grow: 1;
+
+        .logo {
+            display: none;
+        }
+    }
+
+    @include breakpoint-max(1280) {
+        &__wrapper {
+            gap: rem(20);
+        }
+    }
+
+    @include breakpoint-max($tablet-width) {
+        &__left {
+            margin-top: rem(16);
+            gap: rem(8);
+        }
+    }
+}

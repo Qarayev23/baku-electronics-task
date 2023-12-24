@@ -1,4 +1,4 @@
-export const menuLinks = [
+export const menuContent = [
     {
         name: "Telefonlar və qadcetlər",
         icon: "/svg/icon-1.svg",
@@ -40,7 +40,7 @@ export const menuLinks = [
         images:["/png/img-1.png", "/png/img-2.png"],
         subMenu: [
             {
-                name: "Brendlər",
+                name: "Brendlərrrrrrrrr",
                 links: ["Apple", "Huawei", "Samsung", "Realme", "Xiaomi", "Infinix", "Motorola", "Tecno", "TCL", "Nokia", "Oneplus", "Google",]
             },
             {

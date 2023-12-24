@@ -1,0 +1,45 @@
+@import '@/assets/style/utilities/index.scss';
+
+.toggle {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: rem(69);
+    height: rem(38);
+    background-color: $bg-gray;
+    border-radius: rem(19);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.ball {
+    position: absolute;
+    left: rem(4);
+    width: rem(30);
+    height: rem(30);
+    border-radius: rem(15);
+    transition: 0.3s;
+    background-color: $black;
+}
+
+.checkbox {
+    display: none;
+}
+
+.icon {
+    position: absolute;
+
+    &__light {
+        right: rem(10);
+    }
+
+    &__dark {
+        left: rem(10);
+    }
+}
+
+.dark .ball {
+    transition: 0.3s;
+    transform: translateX(rem(31));
+}

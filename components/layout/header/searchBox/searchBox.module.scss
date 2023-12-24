@@ -1,0 +1,49 @@
+@import '@/assets/style/utilities/index.scss';
+
+.searchbox {
+    width: 100%;
+
+    form {
+        height: rem(38);
+        position: relative;
+        background-color: $bg-gray;
+        border-radius: rem(12);
+    }
+
+    button {
+        display: flex;
+        position: absolute;
+        left: rem(16);
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    input {
+        height: 100%;
+        width: 100%;
+        border: 1px solid transparent;
+        outline: none;
+        background: transparent;
+        padding-left: rem(52);
+        border-radius: rem(12);
+
+        &::placeholder {
+            color: $black;
+            opacity: 0.5;
+            @include font(rem(14), 400, 21);
+        }
+
+        &:focus {
+            border-color: $black;
+        }
+    }
+
+    @include breakpoint-max($mobile-width) {
+        position: absolute;
+        top: rem(88);
+        
+        form {
+            height: rem(42);
+        }
+    }
+}

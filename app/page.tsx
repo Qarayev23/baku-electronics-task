@@ -1,5 +1,9 @@
+import Suggestion from "@/components/suggestion";
+
 export default function Home() {
   return (
-    <h1>BakuElectronics</h1>
+    <div className="container">
+      <Suggestion />
+    </div>
   )
 }

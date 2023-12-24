@@ -5,9 +5,27 @@
 .main {
     width: calc(100% - rem(288));
     margin-left: auto;
+    transition: width 0.3s;
 
     &.full {
         width: 100%;
-        margin-left: initial;
+    }
+
+    @include breakpoint-max($desktop-width) {
+        width: 100%;
+    }
+}
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+    max-width: calc(100% - #{rem(48)} * 2);
+
+    @include breakpoint-max($desktop-width) {
+        max-width: calc(100% - #{rem(30)} * 2);
+    }
+
+    @include breakpoint-max($tablet-width) {
+        max-width: calc(100% - #{rem(20)} * 2);
     }
 }
