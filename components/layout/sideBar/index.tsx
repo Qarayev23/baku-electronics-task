@@ -88,7 +88,9 @@ const SideBar = () => {
               <button
                 onClick={(e) => handleRedirect(item.name, item.icon, item.path, e)}
                 className={itemIndex === 0 ? `${styles.categories__btn} ${styles.active}` : styles.categories__btn}>
-                <Image src={item.icon} alt={item.name} width={20} height={20} />
+                <svg>
+                  <use xlinkHref={`${item.icon}#icon-${itemIndex+1}`} />
+                </svg>
                 <p className={styles.categories__text}>{item.name}</p>
               </button>
               <div className={sidebarOpen ? styles.subMenu : `${styles.subMenu} ${styles.hide}`}>
