@@ -89,7 +89,7 @@ const SideBar = () => {
                 onClick={(e) => handleRedirect(item.name, item.icon, item.path, e)}
                 className={itemIndex === 0 ? `${styles.categories__btn} ${styles.active}` : styles.categories__btn}>
                 <svg>
-                  <use xlinkHref={`${item.icon}#icon-${itemIndex+1}`} />
+                  <use xlinkHref={`${item.icon}#icon-${itemIndex + 1}`} />
                 </svg>
                 <p className={styles.categories__text}>{item.name}</p>
               </button>
@@ -104,7 +104,9 @@ const SideBar = () => {
                   {
                     selected?.name &&
                     <Link href={selected?.path} className={styles.back__link}>
-                      <Image src={selected?.icon} alt={selected?.name} width={21} height={21} />
+                      <svg>
+                        <use xlinkHref={`${selected?.icon}#icon-${selected?.icon.split('-')[1].split('.')[0]}`} />
+                      </svg>
                       <p className={styles.categories__text}>{selected?.name}</p>
                     </Link>
                   }
