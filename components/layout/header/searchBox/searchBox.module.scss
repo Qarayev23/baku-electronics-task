@@ -11,11 +11,15 @@
     }
 
     button {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
         position: absolute;
         left: rem(16);
         top: 50%;
-        transform: translateY(-50%);
+        -webkit-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+                transform: translateY(-50%);
     }
 
     input {
@@ -26,6 +30,30 @@
         background: transparent;
         padding-left: rem(52);
         border-radius: rem(12);
+
+        &::-webkit-input-placeholder {
+            color: $black;
+            opacity: 0.5;
+            @include font(rem(14), 400, 21);
+        }
+
+        &::-moz-placeholder {
+            color: $black;
+            opacity: 0.5;
+            @include font(rem(14), 400, 21);
+        }
+
+        &:-ms-input-placeholder {
+            color: $black;
+            opacity: 0.5;
+            @include font(rem(14), 400, 21);
+        }
+
+        &::-ms-input-placeholder {
+            color: $black;
+            opacity: 0.5;
+            @include font(rem(14), 400, 21);
+        }
 
         &::placeholder {
             color: $black;

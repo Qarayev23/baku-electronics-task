@@ -32,7 +32,8 @@
 }
 
 .card {
-    box-shadow: 0px 5px 10px 0px #0000001A;
+    -webkit-box-shadow: 0px 5px 10px 0px #0000001A;
+            box-shadow: 0px 5px 10px 0px #0000001A;
     background-color: $bg-gray;
     border-radius: rem(24);
     padding: rem(26) rem(23) rem(28) rem(23);
@@ -56,12 +57,20 @@
     &__btn {
         background-color: $main-color;
         border-radius: rem(12);
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        align-items: center;
-        justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
         @include font(14, 500, 21);
         padding: rem(10) rem(22);
         color: white;
+        width: -webkit-fit-content;
+        width: -moz-fit-content;
         width: fit-content;
         margin-top: rem(37);
 

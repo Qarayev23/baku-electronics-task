@@ -9,7 +9,8 @@
     border-radius: rem(20);
     padding: rem(25);
     display: none;
-    animation: fadeIn 0.5s;
+    -webkit-animation: fadeIn 0.5s;
+            animation: fadeIn 0.5s;
     z-index: 6;
 
     &.show {
@@ -18,13 +19,20 @@
 
     &__body {
         margin-top: rem(15);
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
         gap: rem(14);
     }
 
     &__left {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
         gap: rem(35);
         background-color: white;
         border-radius: rem(15);
@@ -41,8 +49,11 @@
     }
 
     .chips {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
         gap: rem(9);
 
         &__item {
@@ -51,6 +62,7 @@
             border-radius: rem(109);
             @include font(14, 400, 21);
             text-align: center;
+            -webkit-transition: none;
             transition: none;
 
             &:hover {
@@ -60,18 +72,28 @@
     }
 
     .suggestions {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
         gap: rem(6);
         margin-top: rem(8);
 
         &__link {
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
-            align-items: center;
+            -webkit-box-align: center;
+                -ms-flex-align: center;
+                    align-items: center;
             gap: rem(9);
             @include font(14, 400, 21);
             padding: rem(12) 0;
             border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            -webkit-transition: none;
             transition: none;
 
             &:hover {
@@ -87,8 +109,13 @@
         padding: rem(18) rem(25) rem(27) rem(25);
 
         &__list {
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
-            flex-direction: column;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                    flex-direction: column;
             gap: rem(20);
             margin-top: rem(30);
         }
@@ -96,9 +123,15 @@
         &__link {
             background-color: #F7F7F7;
             border-radius: rem(10);
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
-            justify-content: space-between;
-            align-items: flex-end;
+            -webkit-box-pack: justify;
+                -ms-flex-pack: justify;
+                    justify-content: space-between;
+            -webkit-box-align: end;
+                -ms-flex-align: end;
+                    align-items: flex-end;
             padding: rem(9) rem(5) rem(10) rem(9);
 
             &:hover {
@@ -115,16 +148,24 @@
             position: absolute;
             bottom: 0;
             left: 0;
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
 
             img {
-                object-fit: cover;
+                -o-object-fit: cover;
+                   object-fit: cover;
             }
         }
 
         &__description {
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
-            flex-direction: column;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                    flex-direction: column;
         }
 
         &__name {
@@ -136,8 +177,13 @@
         }
 
         &__price {
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
-            flex-direction: column;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                    flex-direction: column;
         }
 
         &__oldPrice {
@@ -158,8 +204,12 @@
         background-color: white;
         border-radius: rem(15);
         padding: rem(12) rem(25) 0 rem(25);
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        justify-content: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
         margin-top: rem(14);
 
         &__img {
@@ -168,7 +218,8 @@
             position: relative;
 
             img {
-                object-fit: cover;
+                -o-object-fit: cover;
+                   object-fit: cover;
             }
         }
     }
@@ -177,7 +228,10 @@
         top: rem(105);
 
         &__body {
-            flex-direction: column;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                    flex-direction: column;
         }
 
         &__left {
@@ -269,6 +323,16 @@
         &__title {
             @include font(12, 700, 18);
         }
+    }
+}
+
+@-webkit-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
     }
 }
 

@@ -1,21 +1,33 @@
 @import '@/assets/style/utilities/index.scss';
 
 .list {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     gap: rem(32);
     margin-top: rem(43);
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
     height: fit-content;
 
     &__link {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        align-items: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
         gap: rem(8);
         position: relative;
 
         span {
             @include font(14, 400, 21);
             opacity: 0.6;
+            -webkit-transition: 0.3s;
+            -o-transition: 0.3s;
             transition: 0.3s;
         }
 

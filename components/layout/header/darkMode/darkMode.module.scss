@@ -2,14 +2,22 @@
 
 .toggle {
     position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     width: rem(69);
     height: rem(38);
     background-color: $bg-gray;
     border-radius: rem(19);
     cursor: pointer;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
     transition: 0.3s;
 }
 
@@ -19,6 +27,8 @@
     width: rem(30);
     height: rem(30);
     border-radius: rem(15);
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
     transition: 0.3s;
     background-color: $black;
 }
@@ -40,6 +50,10 @@
 }
 
 .dark .ball {
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
     transition: 0.3s;
-    transform: translateX(rem(31));
+    -webkit-transform: translateX(rem(31));
+        -ms-transform: translateX(rem(31));
+            transform: translateX(rem(31));
 }
