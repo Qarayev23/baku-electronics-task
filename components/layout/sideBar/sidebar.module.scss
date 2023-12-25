@@ -290,6 +290,10 @@
             right: 0;
         }
 
+        &.hide {
+            right: -100% !important;
+        }
+
         &__list {
             grid-template-columns: repeat(2, 1fr);
         }

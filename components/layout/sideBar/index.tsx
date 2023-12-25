@@ -91,7 +91,7 @@ const SideBar = () => {
                 <Image src={item.icon} alt={item.name} width={20} height={20} />
                 <p className={styles.categories__text}>{item.name}</p>
               </button>
-              <div className={styles.subMenu}>
+              <div className={sidebarOpen ? styles.subMenu : `${styles.subMenu} ${styles.hide}`}>
                 <button className={styles.sidebar__closeBtn}>
                   <Image src="/svg/close.svg" alt="close" width={14} height={13} />
                 </button>
