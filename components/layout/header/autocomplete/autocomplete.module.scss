@@ -174,6 +174,8 @@
     }
 
     @include breakpoint-max($desktop-width) {
+        top: rem(105);
+
         &__body {
             flex-direction: column;
         }
@@ -188,6 +190,11 @@
     }
 
     @include breakpoint-max($tablet-width) {
+        box-shadow: 0px 13.457876205444336px 28.139196395874023px 0px #00000030;
+        background: white;
+        padding: rem(11) rem(16) rem(18);
+        top: rem(84);
+
         &__body {
             margin-top: 0;
         }
@@ -196,20 +203,29 @@
             display: none;
         }
 
+        .products {
+            padding: 0;
+        }
+
         .chips {
             display: none;
+        }
+
+        .banner {
+            box-shadow: 2px 5px 10px 1px #0000001A;
+            padding-top: rem(7);
+
+            &__img {
+                width: rem(212);
+                height: rem(82);
+            }
         }
     }
 
     @include breakpoint-max($mobile-width) {
-        box-shadow: 0px 13.457876205444336px 28.139196395874023px 0px #00000030;
-        background: white;
-        padding: rem(11) rem(16) rem(18);
         top: rem(146);
 
         .products {
-            padding: 0;
-
             &__list {
                 margin-top: rem(23);
             }
@@ -252,16 +268,6 @@
 
         &__title {
             @include font(12, 700, 18);
-        }
-
-        .banner {
-            box-shadow: 2px 5px 10px 1px #0000001A;
-            padding-top: rem(7);
-
-            &__img {
-                width: rem(212);
-                height: rem(82);
-            }
         }
     }
 }

@@ -1,19 +1,31 @@
 "use client"
 
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { Pagination } from 'swiper/modules';
 import Image from 'next/image';
 import Link from 'next/link';
 import 'swiper/css';
+import 'swiper/css/pagination';
 import styles from "./suggestion.module.scss"
 
 const Suggestion = () => {
   return (
     <Swiper
       spaceBetween={18}
-      slidesPerView={2}
+      slidesPerView={1}
+      modules={[Pagination]}
       className={styles.swiper}
-    >
-      <SwiperSlide>
+      pagination={{ clickable: true }}
+      speed={1000}
+      breakpoints={{
+        768: {
+          slidesPerView: 2,
+        },
+        1024: {
+          slidesPerView: 3,
+        }
+      }}>
+      <SwiperSlide className={styles.swiperSlide}>
         <div className={styles.card}>
           <div className={styles.card__content}>
             <span className={styles.card__desc}>Təkliflər</span>
@@ -28,7 +40,7 @@ const Suggestion = () => {
             alt="suggestion" />
         </div>
       </SwiperSlide>
-      <SwiperSlide>
+      <SwiperSlide className={styles.swiperSlide}>
         <div className={styles.card}>
           <div className={styles.card__content}>
             <span className={styles.card__desc}>Təkliflər</span>
@@ -43,7 +55,7 @@ const Suggestion = () => {
             alt="suggestion" />
         </div>
       </SwiperSlide>
-      <SwiperSlide>
+      <SwiperSlide className={styles.swiperSlide}>
         <div className={styles.card}>
           <div className={styles.card__content}>
             <span className={styles.card__desc}>Təkliflər</span>

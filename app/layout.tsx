@@ -3,7 +3,6 @@ import { Poppins } from 'next/font/google'
 import '@/assets/style/main.scss'
 import SideBar from '@/components/layout/sideBar'
 import ContextProvider from '@/context/ContextProvider'
-import Main from '@/components/main'
 import Header from '@/components/layout/header'
 
 const poppins = Poppins({
@@ -28,12 +27,12 @@ export default function RootLayout({
         <ContextProvider>
           <div className="wrapper">
             <SideBar />
-            <Main>
+            <div className="main">
               <Header />
               <main>
                 {children}
               </main>
-            </Main>
+            </div>
           </div>
         </ContextProvider>
       </body>

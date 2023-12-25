@@ -5,11 +5,6 @@
 .main {
     width: calc(100% - rem(288));
     margin-left: auto;
-    transition: width 0.3s;
-
-    &.full {
-        width: 100%;
-    }
 
     @include breakpoint-max($desktop-width) {
         width: 100%;

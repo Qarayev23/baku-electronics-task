@@ -2,7 +2,7 @@
 
 .logo {
     &.mob {
-        @include breakpoint-min($tablet-width) {
+        @include breakpoint-min($desktop-width) {
             display: none;
         }
     }

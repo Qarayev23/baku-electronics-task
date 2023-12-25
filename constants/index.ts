@@ -2,10 +2,11 @@ export const menuContent = [
     {
         name: "Telefonlar və qadcetlər",
         icon: "/svg/icon-1.svg",
-        images:["/png/img-1.png", "/png/img-2.png"],
+        path: "/",
+        images: ["/png/img-1.png", "/png/img-2.png"],
         subMenu: [
             {
-                name: "Brendlər",
+                name: "Brendlər-1",
                 links: ["Apple", "Huawei", "Samsung", "Realme", "Xiaomi", "Infinix", "Motorola", "Tecno", "TCL", "Nokia", "Oneplus", "Google",],
             },
             {
@@ -37,10 +38,11 @@ export const menuContent = [
     {
         name: "Televizorlar, audio-video",
         icon: "/svg/icon-2.svg",
-        images:["/png/img-1.png", "/png/img-2.png"],
+        path: "/",
+        images: ["/png/img-1.png", "/png/img-2.png"],
         subMenu: [
             {
-                name: "Brendlərrrrrrrrr",
+                name: "Brendlər-2",
                 links: ["Apple", "Huawei", "Samsung", "Realme", "Xiaomi", "Infinix", "Motorola", "Tecno", "TCL", "Nokia", "Oneplus", "Google",]
             },
             {
@@ -72,10 +74,11 @@ export const menuContent = [
     {
         name: "Noutbuklar və kompüterlər",
         icon: "svg/icon-3.svg",
-        images:["/png/img-1.png", "/png/img-2.png"],
+        path: "/",
+        images: ["/png/img-1.png", "/png/img-2.png"],
         subMenu: [
             {
-                name: "Brendlər",
+                name: "Brendlər-3",
                 links: ["Apple", "Huawei", "Samsung", "Realme", "Xiaomi", "Infinix", "Motorola", "Tecno", "TCL", "Nokia", "Oneplus", "Google",]
             },
             {
@@ -107,10 +110,11 @@ export const menuContent = [
     {
         name: "Böyük məişət texnikası",
         icon: "svg/icon-4.svg",
-        images:["/png/img-1.png", "/png/img-2.png"],
+        path: "/",
+        images: ["/png/img-1.png", "/png/img-2.png"],
         subMenu: [
             {
-                name: "Brendlər",
+                name: "Brendlər-4",
                 links: ["Apple", "Huawei", "Samsung", "Realme", "Xiaomi", "Infinix", "Motorola", "Tecno", "TCL", "Nokia", "Oneplus", "Google",]
             },
             {
@@ -142,10 +146,11 @@ export const menuContent = [
     {
         name: "Kiçik məişət texnikası",
         icon: "svg/icon-5.svg",
-        images:["/png/img-1.png", "/png/img-2.png"],
+        path: "/",
+        images: ["/png/img-1.png", "/png/img-2.png"],
         subMenu: [
             {
-                name: "Brendlər",
+                name: "Brendlər-5",
                 links: ["Apple", "Huawei", "Samsung", "Realme", "Xiaomi", "Infinix", "Motorola", "Tecno", "TCL", "Nokia", "Oneplus", "Google",]
             },
             {
@@ -177,10 +182,11 @@ export const menuContent = [
     {
         name: "İqlim texnikası",
         icon: "svg/icon-6.svg",
-        images:["/png/img-1.png", "/png/img-2.png"],
+        path: "/",
+        images: ["/png/img-1.png", "/png/img-2.png"],
         subMenu: [
             {
-                name: "Brendlər",
+                name: "Brendlər-6",
                 links: ["Apple", "Huawei", "Samsung", "Realme", "Xiaomi", "Infinix", "Motorola", "Tecno", "TCL", "Nokia", "Oneplus", "Google",]
             },
             {
@@ -212,10 +218,11 @@ export const menuContent = [
     {
         name: "Gözəllik və sağlamlıq",
         icon: "svg/icon-7.svg",
-        images:["/png/img-1.png", "/png/img-2.png"],
+        path: "/",
+        images: ["/png/img-1.png", "/png/img-2.png"],
         subMenu: [
             {
-                name: "Brendlər",
+                name: "Brendlər-7",
                 links: ["Apple", "Huawei", "Samsung", "Realme", "Xiaomi", "Infinix", "Motorola", "Tecno", "TCL", "Nokia", "Oneplus", "Google",]
             },
             {
@@ -247,10 +254,11 @@ export const menuContent = [
     {
         name: "Foto və Video",
         icon: "svg/icon-8.svg",
-        images:["/png/img-1.png", "/png/img-2.png"],
+        path: "/",
+        images: ["/png/img-1.png", "/png/img-2.png"],
         subMenu: [
             {
-                name: "Brendlər",
+                name: "Brendlər-8",
                 links: ["Apple", "Huawei", "Samsung", "Realme", "Xiaomi", "Infinix", "Motorola", "Tecno", "TCL", "Nokia", "Oneplus", "Google",]
             },
             {
@@ -282,10 +290,11 @@ export const menuContent = [
     {
         name: "Oyun konsolları, oyunlar",
         icon: "svg/icon-9.svg",
-        images:["/png/img-1.png", "/png/img-2.png"],
+        path: "/",
+        images: ["/png/img-1.png", "/png/img-2.png"],
         subMenu: [
             {
-                name: "Brendlər",
+                name: "Brendlər-9",
                 links: ["Apple", "Huawei", "Samsung", "Realme", "Xiaomi", "Infinix", "Motorola", "Tecno", "TCL", "Nokia", "Oneplus", "Google",]
             },
             {
@@ -317,10 +326,11 @@ export const menuContent = [
     {
         name: "Fərdi nəqliyyat",
         icon: "svg/icon-10.svg",
-        images:["/png/img-1.png", "/png/img-2.png"],
+        path: "/",
+        images: ["/png/img-1.png", "/png/img-2.png"],
         subMenu: [
             {
-                name: "Brendlər",
+                name: "Brendlər-10",
                 links: ["Apple", "Huawei", "Samsung", "Realme", "Xiaomi", "Infinix", "Motorola", "Tecno", "TCL", "Nokia", "Oneplus", "Google",]
             },
             {
@@ -352,10 +362,11 @@ export const menuContent = [
     {
         name: "Mebel",
         icon: "svg/icon-11.svg",
-        images:["/png/img-1.png", "/png/img-2.png"],
+        path: "/",
+        images: ["/png/img-1.png", "/png/img-2.png"],
         subMenu: [
             {
-                name: "Brendlər",
+                name: "Brendlər-11",
                 links: ["Apple", "Huawei", "Samsung", "Realme", "Xiaomi", "Infinix", "Motorola", "Tecno", "TCL", "Nokia", "Oneplus", "Google",]
             },
             {
@@ -387,10 +398,11 @@ export const menuContent = [
     {
         name: "Qab-qacaq",
         icon: "svg/icon-12.svg",
-        images:["/png/img-1.png", "/png/img-2.png"],
+        path: "/",
+        images: ["/png/img-1.png", "/png/img-2.png"],
         subMenu: [
             {
-                name: "Brendlər",
+                name: "Brendlər-12",
                 links: ["Apple", "Huawei", "Samsung", "Realme", "Xiaomi", "Infinix", "Motorola", "Tecno", "TCL", "Nokia", "Oneplus", "Google",]
             },
             {
@@ -422,10 +434,11 @@ export const menuContent = [
     {
         name: "Tava-qazan",
         icon: "svg/icon-13.svg",
-        images:["/png/img-1.png", "/png/img-2.png"],
+        path: "/",
+        images: ["/png/img-1.png", "/png/img-2.png"],
         subMenu: [
             {
-                name: "Brendlər",
+                name: "Brendlər-13",
                 links: ["Apple", "Huawei", "Samsung", "Realme", "Xiaomi", "Infinix", "Motorola", "Tecno", "TCL", "Nokia", "Oneplus", "Google",]
             },
             {

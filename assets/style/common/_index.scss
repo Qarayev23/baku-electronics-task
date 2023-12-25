@@ -1,0 +1,15 @@
+.swiper-pagination {
+    bottom: rem(-5) !important;
+
+    &-bullet {
+        width: rem(12) !important;
+        height: rem(12) !important;
+        background: white !important;
+        border: rem(1) solid $main-color !important;
+        opacity: 1 !important;
+
+        &-active {
+            background: $main-color !important;
+        }
+    }
+}

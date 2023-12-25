@@ -27,6 +27,12 @@
         }
     }
 
+    @include breakpoint-max($desktop-width) {
+        &__left {
+            margin-top: rem(25);
+        }
+    }
+
     @include breakpoint-max($tablet-width) {
         &__left {
             margin-top: rem(16);

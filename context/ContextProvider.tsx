@@ -1,24 +1,20 @@
 "use client";
 
-import { useState } from "react";
+import { Dispatch, SetStateAction, useState } from "react";
 import { createContext } from 'react'
 
 interface ContextProps {
     sidebarOpen: boolean
-    handleSidebarOpen: () => void
+    setSidebarOpen: Dispatch<SetStateAction<boolean>>
 }
 
 export const Context = createContext({} as ContextProps);
 
 function ContextProvider({ children }: { children: React.ReactNode }) {
-    const [sidebarOpen, setSidebarOpen] = useState(true);
-
-    const handleSidebarOpen = () => {
-        setSidebarOpen(!sidebarOpen);
-    };
+    const [sidebarOpen, setSidebarOpen] = useState(false);
 
     return (
-        <Context.Provider value={{ sidebarOpen, handleSidebarOpen }}>
+        <Context.Provider value={{ sidebarOpen, setSidebarOpen }}>
             {children}
         </Context.Provider>
     )
