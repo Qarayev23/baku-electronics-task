@@ -254,6 +254,10 @@
 
             &__link {
                 color: white;
+
+                &:hover {
+                    color: $main-color;
+                }
             }
         }
 
