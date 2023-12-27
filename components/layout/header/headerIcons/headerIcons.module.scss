@@ -5,8 +5,8 @@
     display: -ms-flexbox;
     display: flex;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
     gap: rem(12);
     height: -webkit-fit-content;
     height: -moz-fit-content;
@@ -18,19 +18,20 @@
         display: -ms-flexbox;
         display: flex;
         -webkit-box-align: center;
-            -ms-flex-align: center;
-                align-items: center;
+        -ms-flex-align: center;
+        align-items: center;
         -webkit-box-pack: center;
-            -ms-flex-pack: center;
-                justify-content: center;
+        -ms-flex-pack: center;
+        justify-content: center;
         width: rem(38);
         height: rem(38);
         border-radius: rem(12);
         -webkit-box-shadow: 0px 10px 19px 0px #00000008;
-                box-shadow: 0px 10px 19px 0px #00000008;
+        box-shadow: 0px 10px 19px 0px #00000008;
         background-color: $bg-gray;
         position: relative;
-
+        transition: 0.3s background-color;
+        
         &:hover {
             background-color: darken($bg-gray, 9%);
         }
@@ -44,11 +45,11 @@
             display: -ms-flexbox;
             display: flex;
             -webkit-box-align: center;
-                -ms-flex-align: center;
-                    align-items: center;
+            -ms-flex-align: center;
+            align-items: center;
             -webkit-box-pack: center;
-                -ms-flex-pack: center;
-                    justify-content: center;
+            -ms-flex-pack: center;
+            justify-content: center;
             position: absolute;
             right: rem(-5);
             top: rem(-5);
@@ -58,6 +59,12 @@
             background-color: $main-color;
             @include font(8, 700, 12);
             color: white;
+        }
+
+        svg {
+            width: rem(20);
+            height: rem(20);
+            stroke: #333333;
         }
 
         &.mob {
@@ -73,16 +80,32 @@
         }
     }
 
+    &.dark {
+        .icon {
+            background-color: $dark-1;
+            color: white;
+
+            &:hover {
+                background-color: darken($dark-1, 9%);
+            }
+
+            svg {
+                stroke: white;
+                fill: white;
+            }
+        }
+    }
+
     .show {
         display: block;
         -webkit-animation: fadeIn 0.3s;
-                animation: fadeIn 0.3s;
+        animation: fadeIn 0.3s;
     }
 
     .hide {
         display: none;
         -webkit-animation: fadeIn 0.3s;
-                animation: fadeIn 0.3s;
+        animation: fadeIn 0.3s;
     }
 
     @include breakpoint-max($desktop-width) {
@@ -91,26 +114,26 @@
         .icon {
             &:nth-child(1) {
                 -webkit-box-ordinal-group: 3;
-                    -ms-flex-order: 2;
-                        order: 2;
+                -ms-flex-order: 2;
+                order: 2;
             }
 
             &:nth-child(2) {
                 -webkit-box-ordinal-group: 2;
-                    -ms-flex-order: 1;
-                        order: 1;
+                -ms-flex-order: 1;
+                order: 1;
             }
 
             &:nth-child(5) {
                 -webkit-box-ordinal-group: 4;
-                    -ms-flex-order: 3;
-                        order: 3;
+                -ms-flex-order: 3;
+                order: 3;
             }
 
             &:nth-child(6) {
                 -webkit-box-ordinal-group: 5;
-                    -ms-flex-order: 4;
-                        order: 4;
+                -ms-flex-order: 4;
+                order: 4;
             }
         }
     }
@@ -127,7 +150,7 @@
         0% {
             opacity: 0;
         }
-    
+
         100% {
             opacity: 1;
         }
@@ -137,7 +160,7 @@
         0% {
             opacity: 0;
         }
-    
+
         100% {
             opacity: 1;
         }

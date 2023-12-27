@@ -215,6 +215,79 @@
         height: calc(100vh - rem(84));
         padding: rem(20);
     }
+
+    &.dark {
+        background-color: $dark-1;
+
+        .categories {
+            &__btn {
+                color: white;
+
+                &.active {
+                    color: $black;
+                }
+            }
+
+            &__item {
+                &:hover {
+                    .categories__btn {
+                        color: $black;
+                    }
+                }
+            }
+        }
+
+        .sidebar__closeBtn {
+            &:hover {
+                background-color: darken(#E6E6E6, 15%);
+            }
+        }
+
+        .subMenu {
+            background-color: $dark-1;
+
+            &__title {
+                a {
+                    color: white;
+                }
+            }
+
+            &__link {
+                color: white;
+            }
+        }
+
+        .list {
+            &__link {
+                color: white;
+
+                svg {
+                    stroke: white;
+                    fill: white;
+                }
+            }
+        }
+
+        .icons {
+            .icon {
+                svg {
+                    stroke: white;
+                    fill: white;
+                }
+            }
+        }
+
+        .back {
+            &__link {
+                color: white;
+            }
+
+            &__icon {
+                stroke: white;
+                fill: white;
+            }
+        }
+    }
 }
 
 .subMenu {
@@ -331,6 +404,12 @@
         border-bottom: 1px solid rgb(193, 193, 193);
         width: 100%;
         padding-bottom: rem(8);
+
+        &__icon {
+            width: rem(19);
+            height: rem(17);
+            stroke: $black;
+        }
 
         &__btn {
             padding: rem(5);
@@ -467,6 +546,13 @@
         span {
             @include font(14, 400, 21);
         }
+
+        svg {
+            width: rem(8);
+            height: rem(4);
+            stroke: #858585;
+            fill: #858585;
+        }
     }
 
     @include breakpoint-max($desktop-width) {
@@ -498,6 +584,12 @@
         justify-content: center;
         border-radius: rem(12);
         position: relative;
+
+        svg {
+            width: rem(20);
+            height: rem(20);
+            stroke: #333333;
+        }
 
         .lang {
             @include font(14, 700, 21);

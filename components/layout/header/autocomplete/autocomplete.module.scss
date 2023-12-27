@@ -10,7 +10,7 @@
     padding: rem(25);
     display: none;
     -webkit-animation: fadeIn 0.5s;
-            animation: fadeIn 0.5s;
+    animation: fadeIn 0.5s;
     z-index: 6;
 
     &.show {
@@ -31,8 +31,8 @@
         display: flex;
         -webkit-box-orient: vertical;
         -webkit-box-direction: normal;
-            -ms-flex-direction: column;
-                flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
         gap: rem(35);
         background-color: white;
         border-radius: rem(15);
@@ -53,7 +53,7 @@
         display: -ms-flexbox;
         display: flex;
         -ms-flex-wrap: wrap;
-            flex-wrap: wrap;
+        flex-wrap: wrap;
         gap: rem(9);
 
         &__item {
@@ -77,8 +77,8 @@
         display: flex;
         -webkit-box-orient: vertical;
         -webkit-box-direction: normal;
-            -ms-flex-direction: column;
-                flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
         gap: rem(6);
         margin-top: rem(8);
 
@@ -87,8 +87,8 @@
             display: -ms-flexbox;
             display: flex;
             -webkit-box-align: center;
-                -ms-flex-align: center;
-                    align-items: center;
+            -ms-flex-align: center;
+            align-items: center;
             gap: rem(9);
             @include font(14, 400, 21);
             padding: rem(12) 0;
@@ -99,6 +99,13 @@
             &:hover {
                 background-color: darken(white, 7%);
                 border-radius: rem(12);
+            }
+
+            svg {
+                width: rem(18);
+                height: rem(18);
+                fill: #dddddd;
+                stroke: #dddddd;
             }
         }
     }
@@ -114,8 +121,8 @@
             display: flex;
             -webkit-box-orient: vertical;
             -webkit-box-direction: normal;
-                -ms-flex-direction: column;
-                    flex-direction: column;
+            -ms-flex-direction: column;
+            flex-direction: column;
             gap: rem(20);
             margin-top: rem(30);
         }
@@ -127,11 +134,11 @@
             display: -ms-flexbox;
             display: flex;
             -webkit-box-pack: justify;
-                -ms-flex-pack: justify;
-                    justify-content: space-between;
+            -ms-flex-pack: justify;
+            justify-content: space-between;
             -webkit-box-align: end;
-                -ms-flex-align: end;
-                    align-items: flex-end;
+            -ms-flex-align: end;
+            align-items: flex-end;
             padding: rem(9) rem(5) rem(10) rem(9);
 
             &:hover {
@@ -154,7 +161,7 @@
 
             img {
                 -o-object-fit: cover;
-                   object-fit: cover;
+                object-fit: cover;
             }
         }
 
@@ -164,8 +171,8 @@
             display: flex;
             -webkit-box-orient: vertical;
             -webkit-box-direction: normal;
-                -ms-flex-direction: column;
-                    flex-direction: column;
+            -ms-flex-direction: column;
+            flex-direction: column;
         }
 
         &__name {
@@ -182,8 +189,8 @@
             display: flex;
             -webkit-box-orient: vertical;
             -webkit-box-direction: normal;
-                -ms-flex-direction: column;
-                    flex-direction: column;
+            -ms-flex-direction: column;
+            flex-direction: column;
         }
 
         &__oldPrice {
@@ -208,8 +215,8 @@
         display: -ms-flexbox;
         display: flex;
         -webkit-box-pack: center;
-            -ms-flex-pack: center;
-                justify-content: center;
+        -ms-flex-pack: center;
+        justify-content: center;
         margin-top: rem(14);
 
         &__img {
@@ -219,7 +226,74 @@
 
             img {
                 -o-object-fit: cover;
-                   object-fit: cover;
+                object-fit: cover;
+            }
+        }
+    }
+
+    &.dark {
+        background-color: $dark-1;
+
+        .chips {
+            &__item {
+                background-color: $dark-2;
+                color: white;
+
+                &:hover {
+                    background-color: black;
+                }
+            }
+        }
+
+        .autocomplete {
+            &__left {
+                background-color: $dark-2;
+            }
+
+            &__title {
+                color: white;
+            }
+        }
+
+        .suggestions {
+            &__link {
+                color: white;
+                border-color: white;
+
+                &:hover {
+                    color: $black;
+
+                    svg {
+                        fill: $black;
+                        stroke: $black;
+                    }
+                }
+
+                svg {
+                    fill: white;
+                    stroke: white;
+                }
+            }
+        }
+
+        .products {
+            background-color: $dark-2;
+
+            &__link {
+                color: white;
+                background-color: $dark-1;
+            }
+
+            &__description {
+                color: white;
+            }
+
+            &__oldPrice {
+                color: white;
+            }
+    
+            &__newPrice {
+               color: white;
             }
         }
     }
@@ -230,8 +304,8 @@
         &__body {
             -webkit-box-orient: vertical;
             -webkit-box-direction: normal;
-                -ms-flex-direction: column;
-                    flex-direction: column;
+            -ms-flex-direction: column;
+            flex-direction: column;
         }
 
         &__left {

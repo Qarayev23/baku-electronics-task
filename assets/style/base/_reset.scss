@@ -31,6 +31,10 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   height: 100vh;
+
+  &.dark{
+    background-color: $dark-2;
+  }
 }
 
 @media screen and (min-width: 1441px) {

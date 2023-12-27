@@ -10,7 +10,7 @@ import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 
 const SideBar = () => {
-  const { sidebarOpen } = useContext(Context)
+  const { sidebarOpen, isDark } = useContext(Context)
   const [isHover, setIsHover] = useState(false)
   const [selected, setSelected] = useState({ name: '', icon: '', path: '' })
   const router = useRouter()
@@ -49,7 +49,7 @@ const SideBar = () => {
   }
 
   return (
-    <div className={sidebarOpen ? `${styles.sidebar} ${styles.show}` : styles.sidebar}>
+    <div className={`${styles.sidebar} ${isDark ? styles.dark : ''} ${sidebarOpen ? styles.show : ''}`}>
       <div className={isHover ? `${styles.sidebar__header} ${styles.hover}` : styles.sidebar__header}>
         <Logo />
         <button className={styles.sidebar__closeBtn} style={{ display: isHover ? 'none' : 'flex' }}>
@@ -58,10 +58,10 @@ const SideBar = () => {
       </div>
       <div className={styles.icons}>
         <Link href="/" className={styles.icon}>
-          <Image src="/svg/Buy.svg" alt="basket" width={22} height={22} />
+          <svg><use xlinkHref="/svg/Buy.svg#basket"></use></svg>
         </Link>
         <Link href="/" className={styles.icon}>
-          <Image src="/svg/Heart.svg" alt="heart" width={22} height={22} />
+          <svg><use xlinkHref="/svg/Heart.svg#heart"></use></svg>
           <span className={styles.count}>9+</span>
         </Link>
       </div>
@@ -74,7 +74,7 @@ const SideBar = () => {
         </Link>
         <Link href="/" className={styles.list__link}>
           <span>Digər</span>
-          <Image src="/svg/Vector.svg" alt="arrow" width={7} height={4} />
+          <svg><use xlinkHref="/svg/Vector.svg#vector"></use></svg>
         </Link>
       </div>
       <nav>
@@ -99,7 +99,9 @@ const SideBar = () => {
                 </button>
                 <div className={styles.back}>
                   <button className={styles.back__btn} onClick={(e) => navigateBack(e)}>
-                    <Image src="/svg/back.svg" alt="back" className={styles.back__icon} width={19} height={17} />
+                    <svg className={styles.back__icon} >
+                      <use xlinkHref="/svg/back.svg#back" />
+                    </svg>
                   </button>
                   {
                     selected?.name &&

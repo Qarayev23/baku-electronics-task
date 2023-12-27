@@ -2,21 +2,23 @@
 
 import Image from "next/image"
 import styles from './darkMode.module.scss'
-import { useState } from "react"
+import { useContext } from "react"
+import { Context } from "@/context/ContextProvider"
 
 const DarkMode = () => {
-  const [isDark, setIsDark] = useState(false)
+  const { isDark, setIsDark } = useContext(Context)
 
-  const handleOnchange = () => {
+  const handleOnChange = () => {
     setIsDark(!isDark)
+    document.body.classList.toggle('dark')
   }
 
   return (
     <div className={isDark ? styles.dark : styles.light}>
-      <input className={styles.checkbox} type="checkbox" id="toggle" onChange={handleOnchange} />
+      <input className={styles.checkbox} type="checkbox" id="toggle" onChange={handleOnChange} />
       <label className={styles.toggle} htmlFor="toggle">
-        <Image src="/svg/light.svg" width={15} height={15} alt="light" className={`${styles.icon} ${styles.icon__light}`} />
-        <Image src="/svg/dark.svg" width={15} height={15} alt="dark" className={`${styles.icon} ${styles.icon__dark}`} />
+        <svg className={`${styles.icon} ${styles.icon__light}`}><use xlinkHref="svg/light.svg#light"></use></svg>
+        <svg className={`${styles.icon} ${styles.icon__dark}`}><use xlinkHref="svg/dark.svg#dark"></use></svg>
         <span className={styles.ball}></span>
       </label>
     </div>

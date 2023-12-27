@@ -13,3 +13,15 @@
         }
     }
 }
+
+.dark {
+    .swiper-pagination {
+        &-bullet {
+            background: $dark-1 !important;
+
+            &-active {
+                background: $main-color !important;
+            }
+        }
+    }
+}

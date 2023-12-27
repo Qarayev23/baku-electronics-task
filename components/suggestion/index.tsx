@@ -7,8 +7,12 @@ import Link from 'next/link';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import styles from "./suggestion.module.scss"
+import { useContext } from 'react';
+import { Context } from '@/context/ContextProvider';
 
 const Suggestion = () => {
+   const { isDark } = useContext(Context)
+
   return (
     <Swiper
       spaceBetween={18}
@@ -26,7 +30,7 @@ const Suggestion = () => {
         }
       }}>
       <SwiperSlide className={styles.swiperSlide}>
-        <div className={styles.card}>
+        <div className={isDark ? `${styles.card} ${styles.dark}`: styles.card}>
           <div className={styles.card__content}>
             <span className={styles.card__desc}>Təkliflər</span>
             <h4 className={styles.card__title}>İkiqat zəmanət ilə münasib al!</h4>
@@ -41,7 +45,7 @@ const Suggestion = () => {
         </div>
       </SwiperSlide>
       <SwiperSlide className={styles.swiperSlide}>
-        <div className={styles.card}>
+        <div className={isDark ? `${styles.card} ${styles.dark}`: styles.card}>
           <div className={styles.card__content}>
             <span className={styles.card__desc}>Təkliflər</span>
             <h4 className={styles.card__title}>İkiqat zəmanət ilə münasib al!</h4>
@@ -56,7 +60,7 @@ const Suggestion = () => {
         </div>
       </SwiperSlide>
       <SwiperSlide className={styles.swiperSlide}>
-        <div className={styles.card}>
+        <div className={isDark ? `${styles.card} ${styles.dark}`: styles.card}>
           <div className={styles.card__content}>
             <span className={styles.card__desc}>Təkliflər</span>
             <h4 className={styles.card__title}>İkiqat zəmanət ilə münasib al!</h4>

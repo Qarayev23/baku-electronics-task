@@ -3,6 +3,43 @@
 .searchbox {
     width: 100%;
 
+    &.dark {
+        form {
+            background-color: $dark-1;
+
+            input {
+                color: white;
+
+                &::-webkit-input-placeholder {
+                    color: white;
+                }
+
+                &::-moz-placeholder {
+                    color: white;
+                }
+
+                &:-ms-input-placeholder {
+                    color: white;
+                }
+
+                &::-ms-input-placeholder {
+                    color: white;
+                }
+
+                &::placeholder {
+                    color: white;
+                }
+            }
+        }
+
+        button {
+            svg {
+                stroke: white;
+                opacity: 0.7;
+            }
+        }
+    }
+
     form {
         height: rem(38);
         position: relative;
@@ -18,8 +55,14 @@
         left: rem(16);
         top: 50%;
         -webkit-transform: translateY(-50%);
-            -ms-transform: translateY(-50%);
-                transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+
+        svg {
+            width: rem(19);
+            height: rem(19);
+            stroke: #333333;
+        }
     }
 
     input {
@@ -69,7 +112,7 @@
     @include breakpoint-max($mobile-width) {
         position: absolute;
         top: rem(88);
-        
+
         form {
             height: rem(42);
         }

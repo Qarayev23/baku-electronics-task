@@ -5,21 +5,34 @@
     display: -ms-flexbox;
     display: flex;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
     gap: rem(32);
     margin-top: rem(43);
     height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
 
+    &.dark {
+        .list__link {
+            span {
+                color: white;
+            }
+
+            svg {
+                stroke: white;
+                fill: white;
+            }
+        }
+    }
+
     &__link {
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
         -webkit-box-align: center;
-            -ms-flex-align: center;
-                align-items: center;
+        -ms-flex-align: center;
+        align-items: center;
         gap: rem(8);
         position: relative;
 
@@ -31,8 +44,21 @@
             transition: 0.3s;
         }
 
+        svg {
+            width: rem(8);
+            height: rem(4);
+            stroke: #858585;
+            fill: #858585;
+            opacity: 0.6;
+            transition: 0.3s;
+        }
+
         &:hover {
             span {
+                opacity: 1;
+            }
+
+            svg {
                 opacity: 1;
             }
         }

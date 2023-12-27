@@ -1,10 +1,16 @@
+"use client"
+
 import Link from 'next/link'
 import styles from './autocomplete.module.scss'
 import Image from 'next/image'
+import { useContext } from 'react'
+import { Context } from '@/context/ContextProvider'
 
 const Autocomplete = ({ show }: { show: boolean }) => {
+    const { isDark } = useContext(Context)
+
     return (
-        <div className={show ? `${styles.autocomplete} ${styles.show}` : styles.autocomplete}>
+        <div className={`${styles.autocomplete} ${isDark ? styles.dark : ''} ${show ? styles.show : ''}`}>
             <div className={styles.chips}>
                 <Link href="/" className={styles.chips__item}>Apple iPhone</Link>
                 <Link href="/" className={styles.chips__item}>iPhone 15</Link>
@@ -19,25 +25,25 @@ const Autocomplete = ({ show }: { show: boolean }) => {
                         <ul className={styles.suggestions}>
                             <li className={styles.suggestions__item}>
                                 <Link href="/" className={styles.suggestions__link}>
-                                    <Image src="/svg/search.svg" alt="search" width={18} height={18} />
+                                    <svg><use xlinkHref="/svg/search.svg#search"></use></svg>
                                     Apple Iphone 11 pro, 128GB, Gold
                                 </Link>
                             </li>
                             <li className={styles.suggestions__item}>
                                 <Link href="/" className={styles.suggestions__link}>
-                                    <Image src="/svg/search.svg" alt="search" width={18} height={18} />
+                                    <svg><use xlinkHref="/svg/search.svg#search"></use></svg>
                                     Apple Iphone 15 pro, 128GB, Gold
                                 </Link>
                             </li>
                             <li className={styles.suggestions__item}>
                                 <Link href="/" className={styles.suggestions__link}>
-                                    <Image src="/svg/search.svg" alt="search" width={18} height={18} />
+                                    <svg><use xlinkHref="/svg/search.svg#search"></use></svg>
                                     Apple Macbook Air 15
                                 </Link>
                             </li>
                             <li className={styles.suggestions__item}>
                                 <Link href="/" className={styles.suggestions__link}>
-                                    <Image src="/svg/search.svg" alt="search" width={18} height={18} />
+                                    <svg><use xlinkHref="/svg/search.svg#search"></use></svg>
                                     Apple Macbook Pro 16 inch, 256 GB
                                 </Link>
                             </li>
@@ -48,19 +54,19 @@ const Autocomplete = ({ show }: { show: boolean }) => {
                         <ul className={styles.suggestions}>
                             <li className={styles.suggestions__item}>
                                 <Link href="/" className={styles.suggestions__link}>
-                                    <Image src="/svg/search.svg" alt="search" width={18} height={18} />
+                                    <svg><use xlinkHref="/svg/search.svg#search"></use></svg>
                                     Smartfonlar
                                 </Link>
                             </li>
                             <li className={styles.suggestions__item}>
                                 <Link href="/" className={styles.suggestions__link}>
-                                    <Image src="/svg/search.svg" alt="search" width={18} height={18} />
+                                    <svg><use xlinkHref="/svg/search.svg#search"></use></svg>
                                     Qulaqlıqlar
                                 </Link>
                             </li>
                             <li className={styles.suggestions__item}>
                                 <Link href="/" className={styles.suggestions__link}>
-                                    <Image src="/svg/search.svg" alt="search" width={18} height={18} />
+                                    <svg><use xlinkHref="/svg/search.svg#search"></use></svg>
                                     Kompyuterlər
                                 </Link>
                             </li>
