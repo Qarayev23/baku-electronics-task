@@ -291,9 +291,9 @@
             &__oldPrice {
                 color: white;
             }
-    
+
             &__newPrice {
-               color: white;
+                color: white;
             }
         }
     }
@@ -322,6 +322,22 @@
         background: white;
         padding: rem(11) rem(16) rem(18);
         top: rem(84);
+
+        &.dark {
+            .autocomplete__title {
+                padding-left: rem(15);
+            }
+
+            .products {
+                padding: rem(15) 0;
+
+                &__list {
+                    li {
+                        padding: 0 rem(15);
+                    }
+                }
+            }
+        }
 
         &__body {
             margin-top: 0;
